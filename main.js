@@ -1,26 +1,3 @@
-//match height
-function matchHeight(currentClass, dischargeWidth) {
-    if (window.innerWidth >= dischargeWidth) {
-        elemClass = document.querySelectorAll(currentClass);
-        let heightArr = [];
-        for (let elem of elemClass) {
-            heightArr.push(elem.offsetHeight)
-        }
-        let trueHeight = 0;
-        for (let i of heightArr) {
-            if (i > trueHeight) {
-                trueHeight = i;
-            }
-        }
-        for (elem of elemClass) {
-            elem.style.height = `${trueHeight}px`;
-        }
-    }
-}
-matchHeight(".types__list", 850);
-matchHeight(".clients__content", 1004);
-
-//slider
 function slider(sliderNamesObj) {
     let imgArray = document.querySelectorAll(`.${sliderNamesObj.imgClassName}`);
     let arrowArray = document.querySelectorAll(`.${sliderNamesObj.arrowsClassName}`);
